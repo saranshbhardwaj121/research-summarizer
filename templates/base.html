@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Research Summarizer{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<nav class="navbar">
+    <a href="{{ url_for('main.index') if current_user.is_authenticated else url_for('auth.login') }}" class="nav-logo">Research Summarizer</a>
+    <div class="nav-right">
+        {% if current_user.is_authenticated %}
+            <span class="nav-user">{{ current_user.username }}</span>
+            <button type="button" id="theme-toggle" class="btn-icon" aria-label="Toggle dark mode"></button>
+            <a href="{{ url_for('auth.logout') }}" class="btn btn-ghost">Log out</a>
+        {% else %}
+            <button type="button" id="theme-toggle" class="btn-icon" aria-label="Toggle dark mode"></button>
+            <a href="{{ url_for('auth.login') }}" class="btn btn-primary">Log in</a>
+        {% endif %}
+    </div>
+</nav>
+
+<main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</main>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
