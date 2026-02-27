@@ -4,9 +4,7 @@ from flask_login import LoginManager
 from config import Config
 
 # Create extension objects (not bound to app yet)
-db = SQLAlchemy()
-login_manager = LoginManager()
-
+from app.core.extensions import db, login_manager
 
 def create_app(config_class=Config):
     """Application factory function."""
@@ -25,9 +23,8 @@ def create_app(config_class=Config):
     from app import models
 
     # Import and register blueprints
-    from app.auth import auth_bp
-    from app.routes import main_bp
-
+    from app.api.auth_routes import auth_bp
+    from app.api.main_routes import main_bp
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(main_bp)
 

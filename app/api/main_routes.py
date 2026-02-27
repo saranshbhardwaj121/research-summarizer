@@ -1,8 +1,7 @@
 from flask import Blueprint, redirect, render_template, url_for, request, jsonify
 from flask_login import current_user, login_required
-
-from app.arxiv_service import fetch_papers
-from app.gemini_service import summarize_text
+from app.services.arxiv_service import fetch_papers
+from app.services.gemini_service import summarize_text
 
 main_bp = Blueprint("main", __name__)
 
