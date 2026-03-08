@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+<canvas id="bg-canvas"></canvas>
 <nav class="navbar">
     <a href="{{ url_for('main.index') if current_user.is_authenticated else url_for('auth.login') }}" class="nav-logo">Research Summarizer</a>
     <div class="nav-right">

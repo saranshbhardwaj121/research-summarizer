@@ -5,17 +5,21 @@
 {% block content %}
 
 <div class="dashboard-header">
-    <h1 class="page-title">Welcome, {{ current_user.username }}!</h1>
+    <h1 class="page-title"><span class="wave">👋</span> Hey, {{ current_user.username }}!</h1>
     <a href="{{ url_for('auth.logout') }}" class="btn btn-logout">Logout</a>
 </div>
 
 <!-- Search Form -->
 <form id="search-form" class="form">
-    <div class="form-group">
-        <label for="query">Search Research Topic</label>
-        <input type="text" id="query" name="query" placeholder="e.g., machine learning" required>
+    <label for="query" class="form-group" style="margin-bottom:14px;display:block">
+        <span style="font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em">Search Research Topic</span>
+    </label>
+    <div class="search-wrapper">
+        <div class="form-group">
+            <input type="text" id="query" name="query" placeholder="e.g., transformer architecture, quantum computing..." required>
+        </div>
+        <button type="submit" class="btn btn-primary">🔍 Search</button>
     </div>
-    <button type="submit" class="btn btn-primary">Search</button>
 </form>
 
 <!-- Loading Indicator -->
@@ -25,54 +29,5 @@
 
 <!-- Results Section -->
 <div id="results"></div>
-
-<script>
-document.getElementById("search-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const query = document.getElementById("query").value;
-    const resultsDiv = document.getElementById("results");
-    const loadingDiv = document.getElementById("loading");
-
-    resultsDiv.innerHTML = "";
-    loadingDiv.style.display = "block";
-
-    fetch("{{ url_for('main.search') }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams({ query: query })
-    })
-    .then(response => response.json())
-    .then(data => {
-        loadingDiv.style.display = "none";
-
-        if (!data.papers || data.papers.length === 0) {
-            resultsDiv.innerHTML = "<p>No papers found.</p>";
-            return;
-        }
-
-        data.papers.forEach(paper => {
-            const paperDiv = document.createElement("div");
-            paperDiv.classList.add("paper");
-
-            paperDiv.innerHTML = `
-                <h3>${paper.title}</h3>
-                <p><strong>Published:</strong> ${paper.published}</p>
-                <p><strong>Summary:</strong></p>
-                <p>${paper.summary}</p>
-            `;
-
-            resultsDiv.appendChild(paperDiv);
-        });
-    })
-    .catch(error => {
-        loadingDiv.style.display = "none";
-        resultsDiv.innerHTML = "<p>Error fetching results.</p>";
-        console.error(error);
-    });
-});
-</script>
 
 {% endblock %}

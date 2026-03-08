@@ -22,7 +22,15 @@ def summarize_text(text: str) -> str:
             {
                 "parts": [
                     {
-                        "text": f"Summarize the following research abstract in 4-5 concise sentences:\n\n{text}"
+                        "text": (
+                            "You are summarizing a research paper abstract. "
+                            "Return a concise bullet-point summary as plain text.\n"
+                            "Rules:\n"
+                            "- Output 5 bullets (no more, no less).\n"
+                            "- Each bullet must be one sentence and start with '- '.\n"
+                            "- No title, no preface, no numbering, no extra commentary.\n\n"
+                            f"Abstract:\n{text}"
+                        )
                     }
                 ]
             }
