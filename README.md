@@ -41,13 +41,13 @@ Search any topic → Get top papers from arXiv → Read AI-generated bullet-poin
 <div align="center">
 
 ### Login Page
-<img src="assets/screenshots/login.png" alt="Login Page" width="720">
+<img src="assets/screenshots/Login.png" alt="Login Page" width="720">
 
 ### Register Page
-<img src="assets/screenshots/register.png" alt="Register Page" width="720">
+<img src="assets/screenshots/Register.png" alt="Register Page" width="720">
 
 ### Dashboard
-<img src="assets/screenshots/dashboard.png" alt="Dashboard" width="720">
+<img src="assets/screenshots/Dashboard.png" alt="Dashboard" width="720">
 
 ### Search Results with AI Summaries
 <img src="assets/screenshots/search_results.png" alt="Search Results" width="720">
