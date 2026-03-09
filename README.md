@@ -17,26 +17,26 @@ Search any topic → Get top papers from arXiv → Read AI-generated bullet-poin
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Description |
 |---------|-------------|
-| 🔐 **User Authentication** | Secure register, login & logout with hashed passwords |
-| 🔍 **Smart Search** | Search any research topic — fetches top papers from arXiv in real-time |
-| 🤖 **AI Summaries** | Each paper's abstract is summarized into 5 concise bullet points using Google Gemini 2.5 Flash |
-| 📄 **Paper Links** | Direct links to arXiv abstract & PDF for every result |
-| 🌗 **Dark / Light Mode** | Toggle between themes — preference persists across sessions |
-| ✨ **Animated UI** | Glassmorphism design, particle background, smooth card animations |
-| ⚡ **AJAX Search** | No page reloads — results appear instantly via async fetch |
+|  **User Authentication** | Secure register, login & logout with hashed passwords |
+|  **Smart Search** | Search any research topic — fetches top papers from arXiv in real-time |
+|  **AI Summaries** | Each paper's abstract is summarized into 5 concise bullet points using Google Gemini 2.5 Flash |
+|  **Paper Links** | Direct links to arXiv abstract & PDF for every result |
+|  **Dark / Light Mode** | Toggle between themes — preference persists across sessions |
+|  **Animated UI** | Glassmorphism design, particle background, smooth card animations |
+|  **AJAX Search** | No page reloads — results appear instantly via async fetch |
 
 ---
 
 ## 🎬 Demo
 
-> 🎥 **[Watch the demo video on LinkedIn →](www.linkedin.com/in/saransh-bhardwaj-76b102353)**
+> 🎥 **[Watch the demo video on LinkedIn →](https://www.linkedin.com/posts/saransh-bhardwaj-76b102353_i-built-a-tool-that-helps-researchers-and-ugcPost-7436869618419302400-S9cL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFgdTcMB8XSu3V1zVXQJIkd9cDQiVI3rLt4)**
 
 
-## 📸 Screenshots
+##  Screenshots
 
 <div align="center">
 
@@ -60,7 +60,7 @@ Search any topic → Get top papers from arXiv → Read AI-generated bullet-poin
 
 
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -96,7 +96,7 @@ Open **http://127.0.0.1:5000** in your browser. Register an account, log in, and
 
 ---
 
-## 🏗 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -110,7 +110,7 @@ Open **http://127.0.0.1:5000** in your browser. Register an account, log in, and
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 research_summarizer/
@@ -144,7 +144,7 @@ research_summarizer/
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 | Variable | Required | Description |
 |----------|----------|-------------|
@@ -153,7 +153,7 @@ research_summarizer/
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) to get started.
 
@@ -165,13 +165,13 @@ Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md)
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙋‍♂️ Author
+##  Author
 
 **Saransh Bhardwaj**
 
